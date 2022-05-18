@@ -13,3 +13,10 @@
 - 首先需要对 submodule 进行 commit 操作
 - commit 完成之后，相当于主工程对应的提交节点有改动，主工程需要更新节点。
 - 建议使用 SourceTree， 对 submodule 支持更全面
+
+## 情景模拟
+1. 主工程 master 分支，初始化 submodule 提交
+` 2309e9f5185321c828fa52268d347cd66dd40801 Submodule1 (heads/main)
+  5c5fd09ff36cff1c552e043c56fc78ac82c9eabb Submodule2 (heads/main)
+`
+2. 新建 dev 分支
