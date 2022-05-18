@@ -26,8 +26,11 @@
  `
 3.  submodule1 在 dev 分支修改代码,  并提交。
 - 主工程会出现新的改动提示： modified:   Submodule1 (new commits)
-- 主工程 git submodule 也显示有新的节点
+- 主工程 git submodule 也显示有新的节点。前面显示 +
 `+86369512c8ffee91af67e5b8121e5bd085b9bb46 Submodule1 (heads/dev)
   5c5fd09ff36cff1c552e043c56fc78ac82c9eabb Submodule2 (heads/dev)
 `
-4. 主工程更新节点
+4. 主工程在 dev 分支更新节点: 提交修改的文件（节点）
+` 86369512c8ffee91af67e5b8121e5bd085b9bb46 Submodule1 (heads/dev)
+  5c5fd09ff36cff1c552e043c56fc78ac82c9eabb Submodule2 (heads/dev)
+`
