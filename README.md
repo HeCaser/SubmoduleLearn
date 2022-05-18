@@ -14,9 +14,20 @@
 - commit 完成之后，相当于主工程对应的提交节点有改动，主工程需要更新节点。
 - 建议使用 SourceTree， 对 submodule 支持更全面
 
-## 情景模拟
+## 情景模拟 1
 1. 主工程 master 分支，初始化 submodule 提交
 ` 2309e9f5185321c828fa52268d347cd66dd40801 Submodule1 (heads/main)
   5c5fd09ff36cff1c552e043c56fc78ac82c9eabb Submodule2 (heads/main)
 `
-2. 新建 dev 分支
+2. 主工程新建 dev 分支，submodule 新建 dev 分支
+   > 此时 submodule 的节点会指向 heads/dev, 但是 commit 号是不变的。
+` 2309e9f5185321c828fa52268d347cd66dd40801 Submodule1 (heads/dev)
+  5c5fd09ff36cff1c552e043c56fc78ac82c9eabb Submodule2 (heads/dev)
+ `
+3.  submodule1 在 dev 分支修改代码,  并提交。
+- 主工程会出现新的改动提示： modified:   Submodule1 (new commits)
+- 主工程 git submodule 也显示有新的节点
+`+86369512c8ffee91af67e5b8121e5bd085b9bb46 Submodule1 (heads/dev)
+  5c5fd09ff36cff1c552e043c56fc78ac82c9eabb Submodule2 (heads/dev)
+`
+4. 主工程更新节点
